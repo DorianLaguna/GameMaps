@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		114B13CB3090FCB40092CF87 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 114B13CA3090FCB40092CF87 /* MapboxMaps */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		114B137B3090F9570092CF87 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		114B136D3090F9560092CF87 /* GameMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		114B137A3090F9570092CF87 /* GameMapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameMapsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		114B13843090F9570092CF87 /* GameMapsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameMapsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		114B13A00000000000000001 /* .env */ = {isa = PBXFileReference; explicitFileType = text.xcconfig; path = .env; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				114B13CB3090FCB40092CF87 /* MapboxMaps in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +81,7 @@
 		114B13643090F9560092CF87 = {
 			isa = PBXGroup;
 			children = (
+				114B13A00000000000000001 /* .env */,
 				114B136F3090F9560092CF87 /* GameMaps */,
 				114B137D3090F9570092CF87 /* GameMapsTests */,
 				114B13873090F9570092CF87 /* GameMapsUITests */,
@@ -112,6 +119,7 @@
 			);
 			name = GameMaps;
 			packageProductDependencies = (
+				114B13CA3090FCB40092CF87 /* MapboxMaps */,
 			);
 			productName = GameMaps;
 			productReference = 114B136D3090F9560092CF87 /* GameMaps.app */;
@@ -195,6 +203,9 @@
 			);
 			mainGroup = 114B13643090F9560092CF87;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				114B13C93090FCB40092CF87 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 114B136E3090F9560092CF87 /* Products */;
 			projectDirPath = "";
@@ -322,7 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -380,7 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -392,6 +403,7 @@
 		};
 		114B138F3090F9570092CF87 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 114B13A00000000000000001 /* .env */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -400,6 +412,8 @@
 				DEVELOPMENT_TEAM = 8QJZY679F9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_MBXAccessToken = "$(MAPBOX_ACCESS_TOKEN)";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Necesitamos tu ubicación para mostrarte en el mapa.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -424,6 +438,7 @@
 		};
 		114B13903090F9570092CF87 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 114B13A00000000000000001 /* .env */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -432,6 +447,8 @@
 				DEVELOPMENT_TEAM = 8QJZY679F9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_MBXAccessToken = "$(MAPBOX_ACCESS_TOKEN)";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Necesitamos tu ubicación para mostrarte en el mapa.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -462,7 +479,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8QJZY679F9;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dorianlaguna.GameMapsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -484,7 +501,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8QJZY679F9;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dorianlaguna.GameMapsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -578,6 +595,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		114B13C93090FCB40092CF87 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.33.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		114B13CA3090FCB40092CF87 /* MapboxMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 114B13C93090FCB40092CF87 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
+			productName = MapboxMaps;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 114B13653090F9560092CF87 /* Project object */;
 }
